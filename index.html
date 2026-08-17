@@ -1,472 +1,322 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ZHUNIADA 2026 | Gualaquiza</title>
+<title>ZHUNIADA 2026 | Gualaquiza</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #080b0a;
-            color: white;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b09;
+    color: white;
+}
 
-        /* PORTADA */
+/* PORTADA */
 
-        .hero {
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
+.hero {
+    min-height: 72vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-            background:
-                linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.85)),
-                url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2000&q=80");
+    background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.85)),
+        url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2000&q=85");
 
-            background-size: cover;
-            background-position: center;
-        }
+    background-size: cover;
+    background-position: center;
+}
 
-        .hero-content {
-            max-width: 900px;
-        }
+.hero-content {
+    padding: 30px;
+}
 
-        .hero small {
-            letter-spacing: 4px;
-            font-size: 14px;
-            text-transform: uppercase;
-            opacity: .85;
-        }
+.hero small {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 14px;
+}
 
-        .hero h1 {
-            font-size: clamp(55px, 12vw, 130px);
-            font-weight: 900;
-            letter-spacing: -4px;
-            margin: 15px 0;
-        }
+.hero h1 {
+    font-size: clamp(60px, 12vw, 140px);
+    font-weight: 900;
+    letter-spacing: -5px;
+    margin: 15px 0 0;
+}
 
-        .hero h2 {
-            font-size: clamp(20px, 4vw, 38px);
-            font-weight: 400;
-        }
+.hero h2 {
+    font-size: clamp(25px, 5vw, 45px);
+    font-weight: 300;
+    letter-spacing: 8px;
+}
 
-        .hero p {
-            margin-top: 20px;
-            font-size: 17px;
-            opacity: .8;
-        }
+.hero p {
+    margin-top: 25px;
+    color: #ddd;
+    font-size: 18px;
+}
 
-        /* CONTENIDO */
+/* CONTENIDO */
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 70px 20px;
-        }
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 75px 20px;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
+.title {
+    text-align: center;
+    margin-bottom: 45px;
+}
 
-        .section-title h2 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
+.title h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
 
-        .section-title p {
-            color: #aaa;
-        }
+.title p {
+    color: #999;
+}
 
-        /* CATEGORÍAS */
+/* TARJETAS */
 
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 22px;
-        }
+.categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
 
-        .category {
-            position: relative;
-            min-height: 230px;
-            border-radius: 20px;
-            overflow: hidden;
-            display: flex;
-            align-items: flex-end;
-            padding: 30px;
-            background-size: cover;
-            background-position: center;
-            transition: transform .3s ease;
-        }
+.card {
+    min-height: 260px;
+    border-radius: 22px;
+    overflow: hidden;
 
-        .category:hover {
-            transform: translateY(-5px);
-        }
+    position: relative;
 
-        .category::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,.9));
-        }
+    background-size: cover;
+    background-position: center;
 
-        .category-content {
-            position: relative;
-            z-index: 2;
-        }
+    display: flex;
+    align-items: flex-end;
 
-        .category h3 {
-            font-size: 27px;
-            margin-bottom: 7px;
-        }
+    text-decoration: none;
+    color: white;
 
-        .category p {
-            color: #ddd;
-        }
+    transition: .3s;
+}
 
-        .madrina {
-            background-image: url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80");
-        }
+.card:hover {
+    transform: translateY(-7px);
+}
 
-        .familias {
-            background-image: url("https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1000&q=80");
-        }
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
 
-        .juegos {
-            background-image: url("https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1000&q=80");
-        }
+    background: linear-gradient(
+        transparent 25%,
+        rgba(0,0,0,.9)
+    );
+}
 
-        .artisticas {
-            background-image: url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1000&q=80");
-        }
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
 
-        /* VIDEOS */
+.card h3 {
+    font-size: 29px;
+    margin-bottom: 8px;
+}
 
-        .videos {
-            margin-top: 90px;
-        }
+.card p {
+    color: #ddd;
+}
 
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
+/* FONDOS */
 
-        .video-card {
-            background: #111513;
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid #222;
-        }
+.madrina {
+    background-image:
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85");
+}
 
-        .video-placeholder {
-            aspect-ratio: 16 / 9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #181d1a;
-            color: #777;
-            font-size: 50px;
-        }
+.familias {
+    background-image:
+    url("https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=85");
+}
 
-        .video-info {
-            padding: 20px;
-        }
+.juegos {
+    background-image:
+    url("https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=85");
+}
 
-        .video-info h3 {
-            margin-bottom: 7px;
-        }
+.artisticas {
+    background-image:
+    url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=85");
+}
 
-        .video-info p {
-            color: #888;
-            font-size: 14px;
-        }
+/* FOOTER */
 
-        /* REPRODUCTOR */
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    border-top: 1px solid #222;
+    color: #777;
+}
 
-        .youtube {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border: 0;
-        }
+footer strong {
+    color: white;
+}
 
-        /* FOOTER */
+/* CELULAR */
 
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid #222;
-            color: #777;
-        }
+@media(max-width:700px) {
 
-        footer strong {
-            color: white;
-        }
+    .hero {
+        min-height: 65vh;
+    }
 
-        /* CELULAR */
+    .categories {
+        grid-template-columns: 1fr;
+    }
 
-        @media (max-width: 700px) {
+    .card {
+        min-height: 220px;
+    }
 
-            .hero {
-                min-height: 65vh;
-            }
+    .container {
+        padding: 55px 15px;
+    }
 
-            .categories,
-            .video-grid {
-                grid-template-columns: 1fr;
-            }
+}
+</style>
 
-            .category {
-                min-height: 210px;
-            }
-
-            .section-title h2 {
-                font-size: 30px;
-            }
-
-            .container {
-                padding: 50px 15px;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- PORTADA -->
+<header class="hero">
 
-    <header class="hero">
+    <div class="hero-content">
 
-        <div class="hero-content">
+        <small>Gualaquiza · Morona Santiago</small>
 
-            <small>Gualaquiza · Morona Santiago</small>
+        <h1>ZHUNIADA</h1>
 
-            <h1>ZHUNIADA</h1>
+        <h2>2026</h2>
 
-            <h2>2026</h2>
+        <p>
+            Revive los mejores momentos del evento
+        </p>
 
-            <p>
-                Revive los mejores momentos del evento
-            </p>
+    </div>
 
-        </div>
-
-    </header>
+</header>
 
 
-    <!-- CATEGORÍAS -->
+<main class="container">
 
-    <main class="container">
+    <div class="title">
 
-        <section>
+        <h2>Videos del evento</h2>
 
-            <div class="section-title">
+        <p>
+            Selecciona una categoría para ver sus videos.
+        </p>
 
-                <h2>Videos del evento</h2>
+    </div>
+
+
+    <div class="categories">
+
+
+        <a href="madrina.html" class="card madrina">
+
+            <div class="card-content">
+
+                <h3>Sorteo de la nueva madrina</h3>
 
                 <p>
-                    Disfruta nuevamente de los momentos que marcaron
-                    la ZHUNIADA 2026.
+                    Revive este momento especial.
                 </p>
 
             </div>
 
-
-            <div class="categories">
-
-                <div class="category madrina">
-
-                    <div class="category-content">
-
-                        <h3>Sorteo de la nueva madrina</h3>
-
-                        <p>
-                            Revive este momento especial.
-                        </p>
-
-                    </div>
-
-                </div>
+        </a>
 
 
-                <div class="category familias">
+        <a href="familias.html" class="card familias">
 
-                    <div class="category-content">
+            <div class="card-content">
 
-                        <h3>Presentación de familias</h3>
-
-                        <p>
-                            Las familias que fueron parte del evento.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="category juegos">
-
-                    <div class="category-content">
-
-                        <h3>Juegos</h3>
-
-                        <p>
-                            Diversión y momentos inolvidables.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="category artisticas">
-
-                    <div class="category-content">
-
-                        <h3>Presentaciones artísticas</h3>
-
-                        <p>
-                            Música, talento y entretenimiento.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- VIDEOS -->
-
-        <section class="videos">
-
-            <div class="section-title">
-
-                <h2>🎬 Revive ZHUNIADA 2026</h2>
+                <h3>Presentación de familias</h3>
 
                 <p>
-                    Los videos estarán disponibles aquí.
+                    Conoce a las familias participantes.
                 </p>
 
             </div>
 
-
-            <div class="video-grid">
-
-
-                <!-- VIDEO 1 -->
-
-                <article class="video-card">
-
-                    <div class="video-placeholder">
-                        ▶
-                    </div>
-
-                    <div class="video-info">
-
-                        <h3>Sorteo de la nueva madrina</h3>
-
-                        <p>
-                            Video próximamente disponible.
-                        </p>
-
-                    </div>
-
-                </article>
+        </a>
 
 
-                <!-- VIDEO 2 -->
+        <a href="juegos.html" class="card juegos">
 
-                <article class="video-card">
+            <div class="card-content">
 
-                    <div class="video-placeholder">
-                        ▶
-                    </div>
+                <h3>Juegos</h3>
 
-                    <div class="video-info">
-
-                        <h3>Presentación de familias</h3>
-
-                        <p>
-                            Video próximamente disponible.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <!-- VIDEO 3 -->
-
-                <article class="video-card">
-
-                    <div class="video-placeholder">
-                        ▶
-                    </div>
-
-                    <div class="video-info">
-
-                        <h3>Juegos</h3>
-
-                        <p>
-                            Video próximamente disponible.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <!-- VIDEO 4 -->
-
-                <article class="video-card">
-
-                    <div class="video-placeholder">
-                        ▶
-                    </div>
-
-                    <div class="video-info">
-
-                        <h3>Presentaciones artísticas</h3>
-
-                        <p>
-                            Video próximamente disponible.
-                        </p>
-
-                    </div>
-
-                </article>
+                <p>
+                    Diversión y momentos inolvidables.
+                </p>
 
             </div>
 
-        </section>
-
-    </main>
+        </a>
 
 
-    <footer>
+        <a href="artisticas.html" class="card artisticas">
 
-        <p>
-            <strong>ZHUNIADA 2026</strong>
-        </p>
+            <div class="card-content">
 
-        <p>
-            Gualaquiza · Ecuador
-        </p>
+                <h3>Presentaciones artísticas</h3>
 
-    </footer>
+                <p>
+                    Música, talento y entretenimiento.
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p>
+        <strong>ZHUNIADA 2026</strong>
+    </p>
+
+    <p>
+        Gualaquiza · Ecuador
+    </p>
+
+</footer>
 
 </body>
 </html>
