@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ZHUNIADA 2026 | Gualaquiza</title>
 
 <style>
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,21 +21,30 @@ body {
     color: white;
 }
 
-/* PORTADA */
+/* =========================
+   PORTADA
+========================= */
 
 .hero {
+
     min-height: 72vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
 
     background:
-        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.85)),
-        url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2000&q=85");
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.88)
+        ),
+        url("imagenes/portada.jpg");
 
     background-size: cover;
     background-position: center;
+
 }
 
 .hero-content {
@@ -41,180 +52,320 @@ body {
 }
 
 .hero small {
+
     text-transform: uppercase;
+
     letter-spacing: 5px;
+
     font-size: 14px;
+
+    color: #ddd;
+
 }
 
 .hero h1 {
+
     font-size: clamp(60px, 12vw, 140px);
+
     font-weight: 900;
+
     letter-spacing: -5px;
-    margin: 15px 0 0;
+
+    margin-top: 15px;
+
 }
 
 .hero h2 {
+
     font-size: clamp(25px, 5vw, 45px);
+
     font-weight: 300;
+
     letter-spacing: 8px;
+
 }
 
 .hero p {
+
     margin-top: 25px;
+
     color: #ddd;
+
     font-size: 18px;
+
 }
 
-/* CONTENIDO */
+
+/* =========================
+   CONTENIDO
+========================= */
 
 .container {
+
     max-width: 1150px;
+
     margin: auto;
+
     padding: 75px 20px;
+
 }
 
 .title {
+
     text-align: center;
+
     margin-bottom: 45px;
+
 }
 
 .title h2 {
+
     font-size: 38px;
+
     margin-bottom: 12px;
+
 }
 
 .title p {
+
     color: #999;
+
 }
 
-/* TARJETAS */
+
+/* =========================
+   TARJETAS
+========================= */
 
 .categories {
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
     gap: 25px;
+
 }
 
+
 .card {
-    min-height: 260px;
+
+    min-height: 280px;
+
     border-radius: 22px;
+
     overflow: hidden;
 
     position: relative;
 
     background-size: cover;
+
     background-position: center;
 
     display: flex;
+
     align-items: flex-end;
 
     text-decoration: none;
+
     color: white;
 
-    transition: .3s;
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
 }
+
 
 .card:hover {
+
     transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.5);
+
 }
+
 
 .card::after {
+
     content: "";
+
     position: absolute;
+
     inset: 0;
 
-    background: linear-gradient(
-        transparent 25%,
-        rgba(0,0,0,.9)
-    );
+    background:
+        linear-gradient(
+            transparent 20%,
+            rgba(0,0,0,.92)
+        );
+
 }
+
 
 .card-content {
+
     position: relative;
+
     z-index: 2;
+
     padding: 30px;
+
 }
+
 
 .card h3 {
+
     font-size: 29px;
+
     margin-bottom: 8px;
+
 }
+
 
 .card p {
+
     color: #ddd;
+
 }
 
-/* FONDOS */
+
+/* =========================
+   FOTOS REALES DEL EVENTO
+========================= */
 
 .madrina {
+
     background-image:
-    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85");
+        url("imagenes/madrina.jpg");
+
 }
+
 
 .familias {
+
     background-image:
-    url("https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=85");
+        url("imagenes/familias.jpg");
+
 }
+
 
 .juegos {
+
     background-image:
-    url("https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=85");
+        url("imagenes/juegos.jpg");
+
 }
+
 
 .artisticas {
+
     background-image:
-    url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=85");
+        url("imagenes/artisticas.jpg");
+
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
+
     text-align: center;
+
     padding: 45px 20px;
-    border-top: 1px solid #222;
+
+    border-top:
+        1px solid #222;
+
     color: #777;
+
 }
+
 
 footer strong {
+
     color: white;
+
 }
 
-/* CELULAR */
+
+/* =========================
+   CELULARES
+========================= */
 
 @media(max-width:700px) {
 
     .hero {
+
         min-height: 65vh;
+
     }
+
 
     .categories {
+
         grid-template-columns: 1fr;
+
     }
+
 
     .card {
-        min-height: 220px;
+
+        min-height: 230px;
+
     }
 
+
     .container {
-        padding: 55px 15px;
+
+        padding:
+            55px 15px;
+
+    }
+
+
+    .title h2 {
+
+        font-size: 30px;
+
     }
 
 }
+
 </style>
 
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     PORTADA
+========================= -->
 
 <header class="hero">
 
     <div class="hero-content">
 
-        <small>Gualaquiza · Morona Santiago</small>
+        <small>
+            Gualaquiza · Morona Santiago
+        </small>
 
-        <h1>ZHUNIADA</h1>
 
-        <h2>2026</h2>
+        <h1>
+            ZHUNIADA
+        </h1>
+
+
+        <h2>
+            2026
+        </h2>
+
 
         <p>
             Revive los mejores momentos del evento
@@ -225,27 +376,46 @@ footer strong {
 </header>
 
 
+
+<!-- =========================
+     CATEGORÍAS
+========================= -->
+
 <main class="container">
+
 
     <div class="title">
 
-        <h2>Videos del evento</h2>
+        <h2>
+            Videos del evento
+        </h2>
+
 
         <p>
-            Selecciona una categoría para ver sus videos.
+            Selecciona una categoría para
+            revivir sus momentos.
         </p>
 
     </div>
 
 
+
     <div class="categories">
 
 
-        <a href="madrina.html" class="card madrina">
+        <!-- MADRINA -->
+
+        <a
+            href="madrina.html"
+            class="card madrina"
+        >
 
             <div class="card-content">
 
-                <h3>Sorteo de la nueva madrina</h3>
+                <h3>
+                    Sorteo de la nueva madrina
+                </h3>
+
 
                 <p>
                     Revive este momento especial.
@@ -256,14 +426,24 @@ footer strong {
         </a>
 
 
-        <a href="familias.html" class="card familias">
+
+        <!-- FAMILIAS -->
+
+        <a
+            href="familias.html"
+            class="card familias"
+        >
 
             <div class="card-content">
 
-                <h3>Presentación de familias</h3>
+                <h3>
+                    Presentación de familias
+                </h3>
+
 
                 <p>
-                    Conoce a las familias participantes.
+                    Conoce a las familias
+                    participantes.
                 </p>
 
             </div>
@@ -271,14 +451,24 @@ footer strong {
         </a>
 
 
-        <a href="juegos.html" class="card juegos">
+
+        <!-- JUEGOS -->
+
+        <a
+            href="juegos.html"
+            class="card juegos"
+        >
 
             <div class="card-content">
 
-                <h3>Juegos</h3>
+                <h3>
+                    Juegos
+                </h3>
+
 
                 <p>
-                    Diversión y momentos inolvidables.
+                    Diversión y momentos
+                    inolvidables.
                 </p>
 
             </div>
@@ -286,14 +476,24 @@ footer strong {
         </a>
 
 
-        <a href="artisticas.html" class="card artisticas">
+
+        <!-- PRESENTACIONES -->
+
+        <a
+            href="artisticas.html"
+            class="card artisticas"
+        >
 
             <div class="card-content">
 
-                <h3>Presentaciones artísticas</h3>
+                <h3>
+                    Presentaciones artísticas
+                </h3>
+
 
                 <p>
-                    Música, talento y entretenimiento.
+                    Música, talento y
+                    entretenimiento.
                 </p>
 
             </div>
@@ -303,14 +503,25 @@ footer strong {
 
     </div>
 
+
 </main>
 
+
+
+<!-- =========================
+     PIE DE PÁGINA
+========================= -->
 
 <footer>
 
     <p>
-        <strong>ZHUNIADA 2026</strong>
+
+        <strong>
+            ZHUNIADA 2026
+        </strong>
+
     </p>
+
 
     <p>
         Gualaquiza · Ecuador
@@ -318,5 +529,7 @@ footer strong {
 
 </footer>
 
+
 </body>
+
 </html>
