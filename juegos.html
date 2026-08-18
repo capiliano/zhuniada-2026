@@ -25,10 +25,15 @@ body {
     color: white;
 }
 
+
+/* =========================
+   CABECERA
+========================= */
+
 header {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-    padding: 25px;
+    padding: 25px 20px;
 }
 
 header a {
@@ -42,38 +47,47 @@ header a:hover {
     color: white;
 }
 
+
+/* =========================
+   CONTENIDO
+========================= */
+
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     padding: 40px 20px 80px;
 }
 
 h1 {
-    font-size: clamp(35px, 6vw, 65px);
+    font-size: clamp(40px, 7vw, 75px);
     line-height: 1.05;
     margin-bottom: 15px;
 }
 
 .subtitle {
     color: #999;
-    font-size: 17px;
+    font-size: 18px;
     margin-bottom: 45px;
 }
 
+
+/* =========================
+   VIDEO GRANDE
+========================= */
+
 .videos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    width: 100%;
 }
 
 .video {
+    width: 100%;
     background: #121613;
-    border-radius: 18px;
+    border-radius: 22px;
     overflow: hidden;
     border: 1px solid #222;
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,.25);
+        0 15px 45px rgba(0,0,0,.4);
 }
 
 iframe {
@@ -84,18 +98,23 @@ iframe {
 }
 
 .info {
-    padding: 20px;
+    padding: 25px 30px;
 }
 
 .info h2 {
-    font-size: 21px;
-    margin-bottom: 8px;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .info p {
     color: #888;
-    font-size: 14px;
+    font-size: 15px;
 }
+
+
+/* =========================
+   CELULAR
+========================= */
 
 @media(max-width:700px) {
 
@@ -103,12 +122,25 @@ iframe {
         padding: 30px 15px 60px;
     }
 
-    .videos {
-        grid-template-columns: 1fr;
+    h1 {
+        font-size: 42px;
     }
 
-    h1 {
-        font-size: 40px;
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .video {
+        border-radius: 16px;
+    }
+
+    .info {
+        padding: 20px;
+    }
+
+    .info h2 {
+        font-size: 22px;
     }
 
 }
@@ -134,15 +166,18 @@ iframe {
 </header>
 
 
+
 <!-- =========================
      CONTENIDO
 ========================= -->
 
 <main class="container">
 
+
     <h1>
         Juegos
     </h1>
+
 
     <p class="subtitle">
         Revive los juegos y momentos
@@ -150,18 +185,20 @@ iframe {
     </p>
 
 
+
     <div class="videos">
 
 
         <!-- =====================
-             VIDEO 1
+             ÚNICO VIDEO
         ====================== -->
 
         <div class="video">
 
+
             <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID"
-                title="Juegos ZHUNIADA 2026"
+                src="https://www.youtube.com/embed/3o1LIRNfO-A"
+                title="Juegos de ZHUNIADA 2026"
                 loading="lazy"
                 allow="
                     accelerometer;
@@ -175,11 +212,13 @@ iframe {
                 allowfullscreen>
             </iframe>
 
+
             <div class="info">
 
                 <h2>
                     Juegos de ZHUNIADA 2026
                 </h2>
+
 
                 <p>
                     Gualaquiza · Ecuador
@@ -187,10 +226,12 @@ iframe {
 
             </div>
 
+
         </div>
 
 
     </div>
+
 
 </main>
 
