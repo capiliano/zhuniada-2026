@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
@@ -37,15 +38,19 @@ body {
 ========================= */
 
 .hero {
+
     min-height: 72vh;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
 
     background:
+
         linear-gradient(
             rgba(0,0,0,.45),
             rgba(0,0,0,.88)
@@ -54,12 +59,15 @@ body {
         url("imagenes/todos.jpeg");
 
     background-size: cover;
+
     background-position: center;
 }
 
 
 .hero-content {
+
     width: 100%;
+
     max-width: 1000px;
 
     padding: 40px 20px;
@@ -67,6 +75,7 @@ body {
 
 
 .hero small {
+
     text-transform: uppercase;
 
     letter-spacing: 5px;
@@ -78,6 +87,7 @@ body {
 
 
 .hero h1 {
+
     font-size:
         clamp(60px, 12vw, 140px);
 
@@ -90,6 +100,7 @@ body {
 
 
 .hero h2 {
+
     font-size:
         clamp(25px, 5vw, 45px);
 
@@ -100,6 +111,7 @@ body {
 
 
 .hero p {
+
     margin-top: 25px;
 
     color: #ddd;
@@ -112,6 +124,7 @@ body {
 
 /* =========================
    VIDEO PRINCIPAL
+   BUNNY STREAM
 ========================= */
 
 .hero-video {
@@ -124,18 +137,18 @@ body {
 
     position: relative;
 
+    aspect-ratio: 16 / 9;
+
+    background: #000;
+
     border-radius: 18px;
 
     overflow: hidden;
-
-    background: #000;
 
     border: 1px solid rgba(255,255,255,.15);
 
     box-shadow:
         0 15px 45px rgba(0,0,0,.55);
-
-    aspect-ratio: 16 / 9;
 }
 
 
@@ -144,14 +157,16 @@ body {
     position: absolute;
 
     top: 0;
+
     left: 0;
 
     width: 100%;
+
     height: 100%;
 
-    display: block;
-
     border: 0;
+
+    display: block;
 }
 
 
@@ -160,6 +175,7 @@ body {
 ========================= */
 
 .container {
+
     max-width: 1150px;
 
     margin: auto;
@@ -169,6 +185,7 @@ body {
 
 
 .title {
+
     text-align: center;
 
     margin-bottom: 45px;
@@ -176,6 +193,7 @@ body {
 
 
 .title h2 {
+
     font-size: 38px;
 
     margin-bottom: 12px;
@@ -183,6 +201,7 @@ body {
 
 
 .title p {
+
     color: #999;
 }
 
@@ -344,14 +363,13 @@ footer strong {
     .hero {
 
         min-height: auto;
-
     }
+
 
     .hero-content {
 
         padding:
             45px 20px 55px;
-
     }
 
 }
@@ -368,7 +386,6 @@ footer strong {
         min-height: auto;
 
         display: block;
-
     }
 
 
@@ -378,7 +395,6 @@ footer strong {
 
         padding:
             40px 12px 45px;
-
     }
 
 
@@ -387,7 +403,6 @@ footer strong {
         font-size: 10px;
 
         letter-spacing: 3px;
-
     }
 
 
@@ -398,7 +413,6 @@ footer strong {
         letter-spacing: -3px;
 
         margin-top: 12px;
-
     }
 
 
@@ -407,7 +421,6 @@ footer strong {
         font-size: 27px;
 
         letter-spacing: 6px;
-
     }
 
 
@@ -422,11 +435,12 @@ footer strong {
         margin-bottom: 22px;
 
         padding: 0 10px;
-
     }
 
 
-    /* VIDEO EN CELULAR */
+    /* =====================
+       VIDEO EN CELULAR
+    ====================== */
 
     .hero-video {
 
@@ -439,7 +453,6 @@ footer strong {
         border-radius: 12px;
 
         margin: 0 auto;
-
     }
 
 
@@ -448,31 +461,29 @@ footer strong {
         width: 100%;
 
         height: 100%;
-
     }
 
 
-    /* CATEGORÍAS */
+    /* =====================
+       CATEGORÍAS
+    ====================== */
 
     .container {
 
         padding:
             50px 15px 60px;
-
     }
 
 
     .title {
 
         margin-bottom: 35px;
-
     }
 
 
     .title h2 {
 
         font-size: 30px;
-
     }
 
 
@@ -481,7 +492,6 @@ footer strong {
         font-size: 15px;
 
         line-height: 1.5;
-
     }
 
 
@@ -490,7 +500,6 @@ footer strong {
         grid-template-columns: 1fr;
 
         gap: 20px;
-
     }
 
 
@@ -499,21 +508,18 @@ footer strong {
         min-height: 230px;
 
         border-radius: 18px;
-
     }
 
 
     .card-content {
 
         padding: 25px;
-
     }
 
 
     .card h3 {
 
         font-size: 25px;
-
     }
 
 
@@ -521,7 +527,6 @@ footer strong {
 
         padding:
             35px 15px;
-
     }
 
 }
@@ -564,19 +569,25 @@ footer strong {
 
 
         <!-- =====================
-             VIDEO GOOGLE DRIVE
+             VIDEO BUNNY STREAM
         ====================== -->
 
         <div class="hero-video">
 
             <iframe
 
-                src="https://drive.google.com/file/d/14IZ2Ocq8mTspQVXhr283AWX5Je-iAxvq/preview"
+                src="https://player.mediadelivery.net/play/731015/c3c7d54e-fb7d-4c08-b465-24862798531f"
 
                 title="ZHUNIADA 2026 - Gualaquiza"
 
+                loading="lazy"
+
                 allow="
+                    accelerometer;
+                    gyroscope;
                     autoplay;
+                    encrypted-media;
+                    picture-in-picture;
                     fullscreen
                 "
 
