@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
@@ -8,72 +9,107 @@
 
 <title>Juegos | ZHUNIADA 2026</title>
 
+<link rel="icon" type="image/png" href="imagenes/icono.png">
+
 <style>
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#080b09;
-    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b09;
+    color: white;
 }
 
 header {
-    max-width:1100px;
-    margin:auto;
-    padding:25px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
 }
 
-a {
-    color:#aaa;
-    text-decoration:none;
+header a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color .3s;
+}
+
+header a:hover {
+    color: white;
 }
 
 .container {
-    max-width:1100px;
-    margin:auto;
-    padding:40px 20px 80px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px 80px;
 }
 
 h1 {
-    font-size:clamp(35px,6vw,65px);
+    font-size: clamp(35px, 6vw, 65px);
+    line-height: 1.05;
+    margin-bottom: 15px;
 }
 
 .subtitle {
-    color:#999;
-    margin-bottom:45px;
+    color: #999;
+    font-size: 17px;
+    margin-bottom: 45px;
 }
 
 .videos {
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
 .video {
-    background:#121613;
-    border-radius:18px;
-    overflow:hidden;
+    background: #121613;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #222;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
 }
 
 iframe {
-    width:100%;
-    aspect-ratio:16/9;
-    border:0;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    display: block;
 }
 
 .info {
-    padding:20px;
+    padding: 20px;
+}
+
+.info h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
 }
 
 .info p {
-    color:#888;
+    color: #888;
+    font-size: 14px;
 }
 
 @media(max-width:700px) {
 
-.videos {
-    grid-template-columns:1fr;
-}
+    .container {
+        padding: 30px 15px 60px;
+    }
+
+    .videos {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
 
 }
 
@@ -81,49 +117,83 @@ iframe {
 
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     CABECERA
+========================= -->
 
 <header>
 
 <a href="index.html">
-← Volver a ZHUNIADA 2026
+    ← Volver a ZHUNIADA 2026
 </a>
 
 </header>
 
+
+<!-- =========================
+     CONTENIDO
+========================= -->
+
 <main class="container">
 
-<h1>Juegos</h1>
+    <h1>
+        Juegos
+    </h1>
 
-<p class="subtitle">
-Revive los juegos y momentos de diversión de ZHUNIADA 2026.
-</p>
+    <p class="subtitle">
+        Revive los juegos y momentos
+        de diversión de ZHUNIADA 2026.
+    </p>
 
-<div class="videos">
 
-<div class="video">
+    <div class="videos">
 
-<iframe
-src="https://www.youtube.com/embed/VIDEO_ID"
-title="Juegos ZHUNIADA 2026"
-allowfullscreen>
-</iframe>
 
-<div class="info">
+        <!-- =====================
+             VIDEO 1
+        ====================== -->
 
-<h2>Juegos de ZHUNIADA 2026</h2>
+        <div class="video">
 
-<p>
-Gualaquiza · Ecuador
-</p>
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="Juegos ZHUNIADA 2026"
+                loading="lazy"
+                allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share
+                "
+                allowfullscreen>
+            </iframe>
 
-</div>
+            <div class="info">
 
-</div>
+                <h2>
+                    Juegos de ZHUNIADA 2026
+                </h2>
 
-</div>
+                <p>
+                    Gualaquiza · Ecuador
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
 
 </main>
+
 
 </body>
 
