@@ -8,6 +8,8 @@
 
 <title>ZHUNIADA 2026 | Gualaquiza</title>
 
+<link rel="icon" type="image/png" href="imagenes/icono.png">
+
 <style>
 
 * {
@@ -28,87 +30,51 @@ body {
 ========================= */
 
 .hero {
-
     min-height: 72vh;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     text-align: center;
 
     background:
-
         linear-gradient(
             rgba(0,0,0,.45),
             rgba(0,0,0,.88)
         ),
-
-        url("imagenes/todos.jpeg");
+        url("imagenes/madrina.jpg.JPG");
 
     background-size: cover;
-
     background-position: center;
-
 }
-
 
 .hero-content {
-
     padding: 30px;
-
 }
-
 
 .hero small {
-
     text-transform: uppercase;
-
     letter-spacing: 5px;
-
     font-size: 14px;
-
     color: #ddd;
-
 }
-
 
 .hero h1 {
-
-    font-size:
-        clamp(60px, 12vw, 140px);
-
+    font-size: clamp(60px, 12vw, 140px);
     font-weight: 900;
-
     letter-spacing: -5px;
-
     margin-top: 15px;
-
 }
-
 
 .hero h2 {
-
-    font-size:
-        clamp(25px, 5vw, 45px);
-
+    font-size: clamp(25px, 5vw, 45px);
     font-weight: 300;
-
     letter-spacing: 8px;
-
 }
 
-
 .hero p {
-
     margin-top: 25px;
-
     color: #ddd;
-
     font-size: 18px;
-
 }
 
 
@@ -117,38 +83,23 @@ body {
 ========================= */
 
 .container {
-
     max-width: 1150px;
-
     margin: auto;
-
     padding: 75px 20px;
-
 }
-
 
 .title {
-
     text-align: center;
-
     margin-bottom: 45px;
-
 }
-
 
 .title h2 {
-
     font-size: 38px;
-
     margin-bottom: 12px;
-
 }
 
-
 .title p {
-
     color: #999;
-
 }
 
 
@@ -157,148 +108,88 @@ body {
 ========================= */
 
 .categories {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-
 }
 
-
 .card {
-
     min-height: 280px;
-
     border-radius: 22px;
-
     overflow: hidden;
-
     position: relative;
 
     background-size: cover;
-
     background-position: center;
 
     display: flex;
-
     align-items: flex-end;
 
     text-decoration: none;
-
     color: white;
 
     transition:
         transform .3s ease,
         box-shadow .3s ease;
-
 }
 
-
 .card:hover {
-
     transform: translateY(-7px);
 
     box-shadow:
-        0 15px 40px
-        rgba(0,0,0,.5);
-
+        0 15px 40px rgba(0,0,0,.5);
 }
 
-
 .card::after {
-
     content: "";
-
     position: absolute;
-
     inset: 0;
 
     background:
-
         linear-gradient(
             transparent 20%,
             rgba(0,0,0,.92)
         );
-
 }
-
 
 .card-content {
-
     position: relative;
-
     z-index: 2;
-
     padding: 30px;
-
 }
-
 
 .card h3 {
-
     font-size: 29px;
-
     margin-bottom: 8px;
-
 }
 
-
 .card p {
-
     color: #ddd;
-
 }
 
 
 /* =========================
-   TUS FOTOS
+   FOTOS
 ========================= */
 
-
-/* SORTEO */
-
 .madrina {
-
     background-image:
-
         url("imagenes/madrina.jpg.JPG");
-
 }
-
-
-/* FAMILIAS */
 
 .familias {
-
     background-image:
-
         url("imagenes/familias.jpg.jpeg");
-
 }
-
-
-/* JUEGOS */
 
 .juegos {
-
     background-image:
-
         url("imagenes/juegos.jpg.jpeg");
-
 }
 
-
-/* PRESENTACIONES ARTÍSTICAS */
-
 .artisticas {
-
     background-image:
-
         url("imagenes/artisticas.jpg.jpeg");
-
 }
 
 
@@ -307,23 +198,14 @@ body {
 ========================= */
 
 footer {
-
     text-align: center;
-
     padding: 45px 20px;
-
-    border-top:
-        1px solid #222;
-
+    border-top: 1px solid #222;
     color: #777;
-
 }
 
-
 footer strong {
-
     color: white;
-
 }
 
 
@@ -334,38 +216,23 @@ footer strong {
 @media(max-width:700px) {
 
     .hero {
-
         min-height: 65vh;
-
     }
-
 
     .categories {
-
         grid-template-columns: 1fr;
-
     }
-
 
     .card {
-
         min-height: 230px;
-
     }
-
 
     .container {
-
-        padding:
-            55px 15px;
-
+        padding: 55px 15px;
     }
 
-
     .title h2 {
-
         font-size: 30px;
-
     }
 
 }
@@ -390,16 +257,13 @@ footer strong {
             Gualaquiza · Morona Santiago
         </small>
 
-
         <h1>
             ZHUNIADA
         </h1>
 
-
         <h2>
             2026
         </h2>
-
 
         <p>
             Revive los mejores momentos del evento
@@ -410,20 +274,17 @@ footer strong {
 </header>
 
 
-
 <!-- =========================
      CATEGORÍAS
 ========================= -->
 
 <main class="container">
 
-
     <div class="title">
 
         <h2>
             Videos del evento
         </h2>
-
 
         <p>
             Selecciona una categoría para
@@ -433,13 +294,10 @@ footer strong {
     </div>
 
 
-
     <div class="categories">
 
 
-        <!-- =====================
-             MADRINA
-        ====================== -->
+        <!-- MADRINA -->
 
         <a
             href="madrina.html"
@@ -452,7 +310,6 @@ footer strong {
                     Sorteo de la nueva madrina
                 </h3>
 
-
                 <p>
                     Revive este momento especial.
                 </p>
@@ -462,10 +319,7 @@ footer strong {
         </a>
 
 
-
-        <!-- =====================
-             FAMILIAS
-        ====================== -->
+        <!-- FAMILIAS -->
 
         <a
             href="familias.html"
@@ -478,7 +332,6 @@ footer strong {
                     Presentación de familias
                 </h3>
 
-
                 <p>
                     Conoce a las familias
                     participantes.
@@ -489,10 +342,7 @@ footer strong {
         </a>
 
 
-
-        <!-- =====================
-             JUEGOS
-        ====================== -->
+        <!-- JUEGOS -->
 
         <a
             href="juegos.html"
@@ -505,7 +355,6 @@ footer strong {
                     Juegos
                 </h3>
 
-
                 <p>
                     Diversión y momentos
                     inolvidables.
@@ -516,10 +365,7 @@ footer strong {
         </a>
 
 
-
-        <!-- =====================
-             ARTÍSTICAS
-        ====================== -->
+        <!-- ARTÍSTICAS -->
 
         <a
             href="artisticas.html"
@@ -531,7 +377,6 @@ footer strong {
                 <h3>
                     Presentaciones artísticas
                 </h3>
-
 
                 <p>
                     Música, talento y
@@ -545,13 +390,11 @@ footer strong {
 
     </div>
 
-
 </main>
 
 
-
 <!-- =========================
-     PIE DE PÁGINA
+     FOOTER
 ========================= -->
 
 <footer>
@@ -563,7 +406,6 @@ footer strong {
         </strong>
 
     </p>
-
 
     <p>
         Gualaquiza · Ecuador
