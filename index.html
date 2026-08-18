@@ -31,9 +31,11 @@ body {
 
 .hero {
     min-height: 72vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
 
     background:
@@ -41,40 +43,100 @@ body {
             rgba(0,0,0,.45),
             rgba(0,0,0,.88)
         ),
+
         url("imagenes/todos.jpeg");
 
     background-size: cover;
     background-position: center;
 }
 
+
 .hero-content {
-    padding: 30px;
+    width: 100%;
+    max-width: 1000px;
+
+    padding: 40px 20px;
 }
+
 
 .hero small {
     text-transform: uppercase;
+
     letter-spacing: 5px;
+
     font-size: 14px;
+
     color: #ddd;
 }
 
+
 .hero h1 {
-    font-size: clamp(60px, 12vw, 140px);
+    font-size:
+        clamp(60px, 12vw, 140px);
+
     font-weight: 900;
+
     letter-spacing: -5px;
+
     margin-top: 15px;
 }
 
+
 .hero h2 {
-    font-size: clamp(25px, 5vw, 45px);
+    font-size:
+        clamp(25px, 5vw, 45px);
+
     font-weight: 300;
+
     letter-spacing: 8px;
 }
 
+
 .hero p {
     margin-top: 25px;
+
     color: #ddd;
+
     font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   VIDEO DE PORTADA
+========================= */
+
+.hero-video {
+
+    width: 100%;
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background: #000;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.55);
+}
+
+
+.hero-video iframe {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    display: block;
+
+    border: 0;
 }
 
 
@@ -84,19 +146,26 @@ body {
 
 .container {
     max-width: 1150px;
+
     margin: auto;
+
     padding: 75px 20px;
 }
 
+
 .title {
     text-align: center;
+
     margin-bottom: 45px;
 }
 
+
 .title h2 {
     font-size: 38px;
+
     margin-bottom: 12px;
 }
+
 
 .title p {
     color: #999;
@@ -108,24 +177,36 @@ body {
 ========================= */
 
 .categories {
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
     gap: 25px;
 }
 
+
 .card {
+
     min-height: 280px;
+
     border-radius: 22px;
+
     overflow: hidden;
+
     position: relative;
 
     background-size: cover;
+
     background-position: center;
 
     display: flex;
+
     align-items: flex-end;
 
     text-decoration: none;
+
     color: white;
 
     transition:
@@ -133,37 +214,53 @@ body {
         box-shadow .3s ease;
 }
 
+
 .card:hover {
+
     transform: translateY(-7px);
 
     box-shadow:
         0 15px 40px rgba(0,0,0,.5);
 }
 
+
 .card::after {
+
     content: "";
+
     position: absolute;
+
     inset: 0;
 
     background:
+
         linear-gradient(
             transparent 20%,
             rgba(0,0,0,.92)
         );
 }
 
+
 .card-content {
+
     position: relative;
+
     z-index: 2;
+
     padding: 30px;
 }
 
+
 .card h3 {
+
     font-size: 29px;
+
     margin-bottom: 8px;
 }
 
+
 .card p {
+
     color: #ddd;
 }
 
@@ -173,21 +270,28 @@ body {
 ========================= */
 
 .madrina {
+
     background-image:
         url("imagenes/madrina.jpg.JPG");
 }
 
+
 .familias {
+
     background-image:
         url("imagenes/familias.jpg.jpeg");
 }
 
+
 .juegos {
+
     background-image:
         url("imagenes/juegos.jpg.jpeg");
 }
 
+
 .artisticas {
+
     background-image:
         url("imagenes/artisticas.jpg.jpeg");
 }
@@ -198,13 +302,20 @@ body {
 ========================= */
 
 footer {
+
     text-align: center;
+
     padding: 45px 20px;
-    border-top: 1px solid #222;
+
+    border-top:
+        1px solid #222;
+
     color: #777;
 }
 
+
 footer strong {
+
     color: white;
 }
 
@@ -216,22 +327,78 @@ footer strong {
 @media(max-width:700px) {
 
     .hero {
-        min-height: 65vh;
+
+        min-height: auto;
+
     }
 
+
+    .hero-content {
+
+        padding:
+            45px 15px;
+    }
+
+
+    .hero small {
+
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 60px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .hero h2 {
+
+        font-size: 28px;
+
+        letter-spacing: 6px;
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .hero-video {
+
+        border-radius: 14px;
+    }
+
+
     .categories {
+
         grid-template-columns: 1fr;
     }
 
+
     .card {
+
         min-height: 230px;
     }
 
+
     .container {
-        padding: 55px 15px;
+
+        padding:
+            55px 15px;
     }
 
+
     .title h2 {
+
         font-size: 30px;
     }
 
@@ -253,25 +420,63 @@ footer strong {
 
     <div class="hero-content">
 
+
         <small>
             Gualaquiza · Morona Santiago
         </small>
+
 
         <h1>
             ZHUNIADA
         </h1>
 
+
         <h2>
             2026
         </h2>
+
 
         <p>
             Revive los mejores momentos del evento
         </p>
 
+
+
+        <!-- =====================
+             VIDEO PRINCIPAL
+        ====================== -->
+
+        <div class="hero-video">
+
+            <iframe
+
+                src="https://www.youtube.com/embed/xnCWQHTfqrk"
+
+                title="ZHUNIADA 2026 - Gualaquiza"
+
+                loading="lazy"
+
+                allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share
+                "
+
+                allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+
     </div>
 
 </header>
+
 
 
 <!-- =========================
@@ -280,11 +485,13 @@ footer strong {
 
 <main class="container">
 
+
     <div class="title">
 
         <h2>
             Videos del evento
         </h2>
+
 
         <p>
             Selecciona una categoría para
@@ -294,10 +501,13 @@ footer strong {
     </div>
 
 
+
     <div class="categories">
 
 
-        <!-- MADRINA -->
+        <!-- =====================
+             MADRINA
+        ====================== -->
 
         <a
             href="madrina.html"
@@ -310,6 +520,7 @@ footer strong {
                     Sorteo de la nueva madrina
                 </h3>
 
+
                 <p>
                     Revive este momento especial.
                 </p>
@@ -319,7 +530,10 @@ footer strong {
         </a>
 
 
-        <!-- FAMILIAS -->
+
+        <!-- =====================
+             FAMILIAS
+        ====================== -->
 
         <a
             href="familias.html"
@@ -332,6 +546,7 @@ footer strong {
                     Presentación de familias
                 </h3>
 
+
                 <p>
                     Conoce a las familias
                     participantes.
@@ -342,7 +557,10 @@ footer strong {
         </a>
 
 
-        <!-- JUEGOS -->
+
+        <!-- =====================
+             JUEGOS
+        ====================== -->
 
         <a
             href="juegos.html"
@@ -355,6 +573,7 @@ footer strong {
                     Juegos
                 </h3>
 
+
                 <p>
                     Diversión y momentos
                     inolvidables.
@@ -365,7 +584,10 @@ footer strong {
         </a>
 
 
-        <!-- ARTÍSTICAS -->
+
+        <!-- =====================
+             ARTÍSTICAS
+        ====================== -->
 
         <a
             href="artisticas.html"
@@ -377,6 +599,7 @@ footer strong {
                 <h3>
                     Presentaciones artísticas
                 </h3>
+
 
                 <p>
                     Música, talento y
@@ -390,7 +613,9 @@ footer strong {
 
     </div>
 
+
 </main>
+
 
 
 <!-- =========================
@@ -406,6 +631,7 @@ footer strong {
         </strong>
 
     </p>
+
 
     <p>
         Gualaquiza · Ecuador
